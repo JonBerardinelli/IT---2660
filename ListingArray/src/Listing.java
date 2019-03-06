@@ -22,7 +22,6 @@ public class Listing {
 	}
 
 	public String getName() {
-//		toString();
 		return name;
 	}
 	public int getAge() {

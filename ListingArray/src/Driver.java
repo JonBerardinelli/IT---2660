@@ -1,22 +1,16 @@
 import java.util.Scanner;
-import java.util.ArrayList;
 public class Driver {
 	
 	static Scanner a = new Scanner(System.in);
 	
 	public static void main(String[] args) {
 		Listing[] ListArray = new Listing[3];
-//		String name = " ";
-//		int age = 0;
 
-		for (int i = 0; i < ListArray.length; i++) {
-			
+		for (int i = 0; i < ListArray.length; i++) {			
 			System.out.println("Person " + (i+1) + " info:");
 			System.out.println("What is your name?");
-//			name = a.nextLine();	
 			String name = a.nextLine();	
 			System.out.println("How old are you?");
-//			age = a.nextInt();
 			int age = Integer.parseInt(a.nextLine());
 			ListArray[i] = new Listing(name, age);
 		}
