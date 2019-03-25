@@ -32,18 +32,34 @@ public class Driver3_2 {
 				break;
 			case 3:
 				String deleteName = JOptionPane.showInputDialog("Enter a name to delete a listing");
-				array.delete(deleteName);
-				JOptionPane.showMessageDialog(null, "Student entry deleted.");
+				if (array.delete(deleteName) == false) {
+					JOptionPane.showMessageDialog(null, "Student doesn't exist");
+				}
+				else {
+					array.delete(deleteName);
+					JOptionPane.showMessageDialog(null, "Student entry deleted.");
+				}
 				break;
 			case 4:
 				String updateName = JOptionPane.showInputDialog("Enter a name to update a listing");
-				CollegeStudentListing updateStudent = new CollegeStudentListing();
-				updateStudent.input();
-				array.update(updateName, updateStudent);
-				JOptionPane.showMessageDialog(null, array.fetch(updateName));
+				CollegeStudentListing checkStudent = array.fetch(updateName);
+				if (checkStudent == null) {
+					JOptionPane.showMessageDialog(null, "Student " + updateName + "'s entry doesn't exist.");					
+				}
+				else {
+					CollegeStudentListing updateStudent = new CollegeStudentListing();
+					updateStudent.input();
+					array.update(updateName, updateStudent);
+					JOptionPane.showMessageDialog(null, "Student " + updateName + "'s entry has been changed.");
+				}
 				break;
 			case 5:
-				JOptionPane.showMessageDialog(null, array.showAll());
+				if (array.showAll() == "") {
+					JOptionPane.showMessageDialog(null, "There are no student entries");					
+				}
+				else {
+					JOptionPane.showMessageDialog(null, array.showAll());
+				}
 				break;
 			}
 		}		
