@@ -87,8 +87,9 @@ public class SortedArray {
 				+ "enter in first:");
 		int arrayIntNum = 0;
 		try{
-		    if(arrayNum != null)
+		    if(arrayNum != null) {
 		    	arrayIntNum = Integer.parseInt(arrayNum);
+		    }
 		}
 		catch (NumberFormatException e){
 			arrayIntNum = 0;

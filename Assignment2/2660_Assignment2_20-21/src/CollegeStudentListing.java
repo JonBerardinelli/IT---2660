@@ -46,8 +46,9 @@ public class CollegeStudentListing {
 									"\n\t6: Exit Program");
 		int selectNum = 0;
 		try{
-		    if(paneSelect != null)
+		    if(paneSelect != null) {
 		    	selectNum = Integer.parseInt(paneSelect);
+		    }
 		}
 		catch (NumberFormatException e){
 			selectNum = 0;
