@@ -44,7 +44,14 @@ public class CollegeStudentListing {
 									"\n\t4: Update a student's info" + 
 									"\n\t5: Output all students' info" + 
 									"\n\t6: Exit Program");
-		int selectNum = Integer.parseInt(paneSelect);
+		int selectNum = 0;
+		try{
+		    if(paneSelect != null)
+		    	selectNum = Integer.parseInt(paneSelect);
+		}
+		catch (NumberFormatException e){
+			selectNum = 0;
+		}		
 		return selectNum;
 	}
 
