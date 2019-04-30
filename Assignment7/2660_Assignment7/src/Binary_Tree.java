@@ -135,15 +135,16 @@ public class Binary_Tree {
     
     public String treeCheck(TreeNode root)
     {
+        String print = "";
         if(root.lc != null) {
         	treeCheck(root.lc);
         }
-        String print = "";
-        print += root.node.toString();
+		for (int i = 0; i < size; i++) {
+	        print += root.node.toString();			
+		}
         if(root.rc != null) {
         	treeCheck(root.rc);
         }
-        print += root.node.toString();
        return print;
     }
     
