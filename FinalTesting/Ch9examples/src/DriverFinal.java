@@ -1,9 +1,8 @@
-import javax.swing.JOptionPane;
 
-public class MainSimpleGraph {
+public class DriverFinal {
 
 	public static void main(String[] args) {
-        int nodesNum = 5;
+        int nodesNum = 100000;
         SimpleGraph graph = new SimpleGraph(nodesNum);
         
         graph.InitializeNodes(graph, nodesNum);
